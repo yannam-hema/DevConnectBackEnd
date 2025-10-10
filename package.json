@@ -1,0 +1,27 @@
+{
+  "name": "devconnect-backend",
+  "version": "1.0.0",
+  "description": "Dev connect Backend micro service",
+  "keywords": [
+    "nodejs"
+  ],
+  "homepage": "https://github.com/yannam-hema/DevConnectBackEnd#readme",
+  "bugs": {
+    "url": "https://github.com/yannam-hema/DevConnectBackEnd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yannam-hema/DevConnectBackEnd.git"
+  },
+  "license": "ISC",
+  "author": "yannam hema",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

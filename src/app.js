@@ -1,25 +1,27 @@
 const express=require("express");
 const app=express();
 
-app.get("/ab+c",(req,res)=>{
-    res.send("abc page");
-})
 
-app.get("/user/",(req,res)=>{
-    res.send("user information git successfully !");
-})
+//every syntax is some an same while handling requests
+// app.use("/something",rh1,rh2,rh3,rh4);
+// app.use("/something",[rh1,rh2,rh3,rh4]);
+// app.use("/something",[rh1,rh2],rh3,rh4);
 
-app.post("/user",(req,res)=>{
-    res.send("user information post successfully !")
-})
+app.get("/a",(req,res,next)=>{
+   // res.send("abc page");
+   console.log("zero")
+    next();
+},
+(req,res,next)=>{
+    console.log("one");
+    next();
+},
+(req,res)=>{
+    console.log("two");
+    res.send("yeah!! got it ")
+}
+)
 
-app.use("/",(req,res)=>{
-    res.send("hello world !");
-})
-
-app.use("/hema",(req,res)=>{
-    res.send("hello Hema ! ")
-})
 
 app.listen(3000,()=>{
     console.log("server is running ....");
